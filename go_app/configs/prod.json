@@ -1,0 +1,4 @@
+{
+    "Port": 8080,
+    "RedisURL": "redis:6379"
+}

@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        ports:
+            - 8080:8080
+        volumes:
+            - ./:/go/src/app
+        networks:
+            - developer
+
+    redis:
+        image: redis:4.0.14-alpine
+        ports:
+            - 6379:6379
+        networks:
+            - developer
+
+networks:
+    developer:
