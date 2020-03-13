@@ -5,6 +5,8 @@ services:
     volumes:
       - "./sonar/sonar.properties:/opt/sonarqube/conf/sonar.properties"
       - "./tmp/data:/opt/sonarqube/data"
+      - "./tmp/logs:/opt/sonarqube/logs"
+      - "./tmp/extensions:/opt/sonarqube/extensions"
     ports:
       - "9000:9000"
       - "9092:9092"
@@ -30,4 +32,11 @@ services:
     depends_on:
       - sonar
 
-  
+  web_app:
+    image: sonnar-scanner:latest
+    restart: on-failure
+    volumes:
+      - "./pudim_app:/app"
+    depends_on:
+      - sonar
+
