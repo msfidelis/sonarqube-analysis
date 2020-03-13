@@ -18,6 +18,6 @@ docker-compose up --force-recreate
 ```
 
 
-![dash](./github/img/1.png)
+![dash](.github/img/1.png)
 
-![proj](./github/img/2.png)
+![proj](.github/img/2.png)
