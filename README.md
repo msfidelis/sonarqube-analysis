@@ -13,6 +13,11 @@ bash entrypoint.sh
 
 # Exec docker-compose stack
 
-```bash
+```bash 
 docker-compose up --force-recreate
 ```
+
+
+![dash](./github/img/1.png)
+
+![proj](./github/img/2.png)
